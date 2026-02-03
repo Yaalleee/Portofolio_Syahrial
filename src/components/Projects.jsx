@@ -17,7 +17,7 @@ function Projects() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-56 object-cover"
+                className="w-full h-100 object-cover"
               />
 
               <div className="p-6">

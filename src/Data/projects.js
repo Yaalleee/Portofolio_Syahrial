@@ -1,3 +1,4 @@
+import Satset from "../assets/satset-ai.png";
 const projects = [
   {
     title: "Website Caffe Bidzar",
@@ -12,7 +13,7 @@ const projects = [
     title: "Satset AI",
     description:
       "Satset AI untuk membatu mahasiswa dalam mengerjakan tugas, membuat konten, dan belajar lebih efisien.",
-    image: "/project2.png",
+    image: Satset,
     tech: ["React", "Tailwind"],
     demo: "https://satset-ai.netlify.app/",
     github: "#",

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 function Hero() {
   const [displayedText, setDisplayedText] = useState("");
+  const [isDone, setIsDone] = useState(false);
   const fullText = "Frontend Developer yang fokus membangun website modern, cepat, dan responsif menggunakan React.";
 
   useEffect(() => {
@@ -13,9 +14,10 @@ function Hero() {
         setDisplayedText(fullText.substring(0, index + 1));
         index++;
       } else {
+        setIsDone(true);
         clearInterval(interval);
       }
-    }, 50);
+    }, 45);
 
     return () => clearInterval(interval);
   }, []);
@@ -61,7 +63,9 @@ function Hero() {
             <div className="min-h-20 mb-8">
               <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                 {displayedText}
-                <span className="inline-block w-2 h-6 md:h-8 bg-cyan-400 ml-1 animate-pulse"></span>
+                {!isDone && (
+    <span className="inline-block w-2 h-6 md:h-8 bg-cyan-400 ml-1 animate-pulse"></span>
+  )}
               </p>
             </div>
 
